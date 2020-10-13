@@ -15,9 +15,20 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- task: UseRubyVersion@0
+  inputs:
+    versionSpec: '>= 2.4'
+
 - script: |
     npm install
     npm start &
+  displayName: 'npm install start server'
+
+- script: |
     gem install selenium-webdriver
+  displayName: 'install ruby bindings'
+
+- script: |
     ruby testScripts/automate_test.rb
-  displayName: 'npm install and build'
+  displayName: 'Run BrowserStack test'
+
