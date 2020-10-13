@@ -18,4 +18,6 @@ steps:
 - script: |
     npm install
     npm start &
+    gem install selenium-webdriver
+    ruby testScripts/automate_test.rb
   displayName: 'npm install and build'
