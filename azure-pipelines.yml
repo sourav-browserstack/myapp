@@ -26,12 +26,10 @@ steps:
 
 - script: |
     gem install selenium-webdriver
-  displayName: 'install ruby bindings'
-
-- script: |
     ruby testScripts/automate_test.rb
-  displayName: 'Run BrowserStack test'
-  env:
-    BROWSERSTACK_USERNAME: $(BROWSERSTACK_USERNAME)
-    BROWSERSTACK_ACCESS_KEY: $(BROWSERSTACK_ACCESS_KEY)
+      env:
+        BROWSERSTACK_USERNAME: $(BROWSERSTACK_USERNAME)
+        BROWSERSTACK_ACCESS_KEY: $(BROWSERSTACK_ACCESS_KEY)
+  displayName: 'Run Bstack test'
+  
 
