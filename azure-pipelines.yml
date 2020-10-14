@@ -33,4 +33,6 @@ steps:
   displayName: 'Run Bstack test'
   
 - task: BrowserStackResults@0
-
+  env:
+    BROWSERSTACK_USERNAME: $(BROWSERSTACK_USERNAME)
+    BROWSERSTACK_ACCESS_KEY: $(BROWSERSTACK_ACCESS_KEY)
