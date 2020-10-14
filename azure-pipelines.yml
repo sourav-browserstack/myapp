@@ -27,9 +27,9 @@ steps:
 - script: |
     gem install selenium-webdriver
     ruby testScripts/automate_test.rb
-      env:
-        BROWSERSTACK_USERNAME: $(BROWSERSTACK_USERNAME)
-        BROWSERSTACK_ACCESS_KEY: $(BROWSERSTACK_ACCESS_KEY)
+  env:
+    BROWSERSTACK_USERNAME: $(BROWSERSTACK_USERNAME)
+    BROWSERSTACK_ACCESS_KEY: $(BROWSERSTACK_ACCESS_KEY)
   displayName: 'Run Bstack test'
   
 
