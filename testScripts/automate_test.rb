@@ -3,6 +3,10 @@ require	'selenium-webdriver'
 
 username=ENV['BROWSERSTACK_USERNAME']
 key=ENV['BROWSERSTACK_ACCESS_KEY']
+
+puts "Username - #{username}"
+puts "Key - #{key}"
+
 url = "http://#{username}:#{key}@hub-cloud.browserstack.com/wd/hub"
 
 #Input Capabilities
