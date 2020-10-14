@@ -21,8 +21,7 @@ steps:
 
 - script: |
     npm install
-    npm start &
-  displayName: 'npm install start server'
+  displayName: 'npm install'
 
 - script: |
     gem install selenium-webdriver
