@@ -37,8 +37,8 @@ driver.execute_script('browserstack_executor: {"action": "setSessionName", "argu
 driver.navigate.to "http://localhost:3000"
 puts driver.title
 
-# Setting the status of test as 'passed' or 'failed' based on the condition; if title of the web page matches 'Express'
-if driver.title=="Express"
+# Setting the status of test as 'passed' or 'failed' based on the condition; if title of the web page matches 'Sourav Kundu'
+if driver.title=="Sourav Kundu"
   driver.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed", "reason": "Title matched!"}}')
 else
   driver.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed", "reason": "Title not matched"}}')
